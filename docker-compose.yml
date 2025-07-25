@@ -1,0 +1,22 @@
+services:
+  static-site:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: my-hugo-app:production
+    container_name: static-site
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+    environment:
+      - NGINX_PORT=80
+  app:
+    image: 'jc21/nginx-proxy-manager:latest'
+    restart: unless-stopped
+    ports:
+      - '80:80'
+      - '81:81'
+      - '443:443'
+    volumes:
+      - ./data:/data
+      - ./letsencrypt:/etc/letsencrypt
