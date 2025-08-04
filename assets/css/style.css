@@ -3549,22 +3549,7 @@ video {
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
 
-font-family: ui-sans-serif,
-system-ui,
--apple-system,
-BlinkMacSystemFont,
-"Segoe UI",
-Roboto,
-"Helvetica Neue",
-Arial,
-"Noto Sans",
-sans-serif,
-Apple Color Emoji,
-Segoe UI Emoji,
-NotoColorEmoji,
-Segoe UI Symbol,
-Android Emoji,
-EmojiSymbols;
+
 
 /* Custom CSS */
 
@@ -4876,4 +4861,8 @@ EmojiSymbols;
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
+}
+/* --- Logo Styles --- */
+.logo-text {
+  font-family: 'Source Code Pro', monospace;
 }
